@@ -12,5 +12,7 @@ much time to work on this as I'd hoped.  I know there are better tools out there
 Feel free to use it or abuse it. I went with CC0, so its completely yours to use however. Even commercially.  I could have gone a different route
 and used visual studio, or java, and made a much more coherent working tool. But, I was feeling especially weak on my Python skills after messing around
 for two hours trying to get the ESP32 to just turn the screen on... So I figured I would work on my weaker areas...
+The Gen_Code.txt is just a sample output to show what the result will look like. 
+
 
 So yea, Play safe. Try to make something you've never done before, and dont eat the code. It causes indigestion.
