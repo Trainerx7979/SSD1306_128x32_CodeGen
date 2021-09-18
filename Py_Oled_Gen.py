@@ -23,8 +23,7 @@ Created on Sat Sep 18 07:09:15 2021                                        ||
                                                       
 """
 import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt        -----uncomment if you want.
 from random import random
 import pygame
 BLACK = (0, 0, 0)
@@ -35,13 +34,14 @@ pixel_magic = []
 width = 128
 height = 32
 
-def plotit():
-    plt.title("pixel_plot")
-    pixel_plot = plt.imshow(
-        data, cmap='Greens', interpolation='nearest', origin='lower')
-  
-    plt.colorbar(pixel_plot)
-    plt.show(pixel_plot)
+#--------------You can bring back the plot if you want, but its slow and not very useful. But fun.
+#def plotit():
+#    plt.title("pixel_plot")
+#    pixel_plot = plt.imshow(
+#        data, cmap='Greens', interpolation='nearest', origin='lower')
+#  
+#    plt.colorbar(pixel_plot)
+#    plt.show(pixel_plot)
 
 # importing modules
   
@@ -57,14 +57,15 @@ data = data.reshape(ncols, nrows)
 for f in range(0, 32):
     for e in range(0, 128):
         data[f, e] = 0
+
 # creating a plot
-pixel_plot = plt.figure()
+#pixel_plot = plt.figure()
 
 # plotting a plot
-pixel_plot.add_axes()
+#pixel_plot.add_axes()
   
 
-plotit()
+#plotit()
 
 def main():
     global SCREEN, CLOCK
@@ -98,7 +99,7 @@ def main():
                 sys.exit()
 
             if event.type == pygame.KEYDOWN:             
-            # Tool Changes with Space Bar.
+            # Tool Changes with Space Bar between single pixel and broken attempt at line drawing.
                 if event.key == pygame.K_PAGEDOWN:
                     convdat = []
                     convdat = str(data)
@@ -150,14 +151,6 @@ def main():
                         convposy = 31
                     xp2 = convposx
                     yp2 = convposy
-                #if xp1 < 0:
-                #    xp1 = 0
-                #if yp1 < 0:
-                #    yp1 = 0
-                #if xp2 < 0:
-                #    xp2 = 0
-                #if yp2 < 0:
-                #    yp2 = 0
                 draw = 1
                 while draw > 0:
                     if xp1 < xp2:
